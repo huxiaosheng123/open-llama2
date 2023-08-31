@@ -98,7 +98,7 @@ Llama2-Chat模型基于预训练模型进行了监督微调，具备更强的对
         --save_steps=500 \
         --num_train_epochs 1
     ```
-  这一阶段的的数据集示例如下：
+
 
 - ##第二阶段预训练
    第二阶段预训练使用LoRA技术(论文“[LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)”以及源码[LoRA](https://github.com/microsoft/LoRA))，训练embedding的同时也更新LoRA参数。
@@ -149,7 +149,6 @@ Llama2-Chat模型基于预训练模型进行了监督微调，具备更强的对
         --output_type huggingface \
         --output_dir /data_hxs/output/llama2-13b_merge
       ```
-    这一阶段的的数据集示例如下：
 
 
 ## 模型微调
