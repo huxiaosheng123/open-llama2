@@ -80,7 +80,7 @@ Llama2-Chat模型基于预训练模型进行了监督微调，具备更强的对
 预训练本项目分为两个阶段，第一阶段仅训练embedding层，目的是让扩充的中文词表更好的适应模型。但是弊端是该阶段收敛速递会非常慢，
 如果不是有特别充裕的时间和计算资源，也可以跳过该阶段，直接进行第二阶段的预训练。
 
-- ##第一阶段预训练
+- ## 第一阶段预训练
     第一阶段的预训练代码，本项目是唯一开源出来的，运行如下命令供参考：
     ```bash
     CUDA_VISIBLE_DEVICES=2,3 torchrun --master_port 29510 --nproc_per_node=2 run_clm.py \
@@ -100,7 +100,7 @@ Llama2-Chat模型基于预训练模型进行了监督微调，具备更强的对
     ```
 
 
-- ##第二阶段预训练
+- ## 第二阶段预训练
    第二阶段预训练使用LoRA技术(论文“[LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)”以及源码[LoRA](https://github.com/microsoft/LoRA))，训练embedding的同时也更新LoRA参数。
    脚本运行如下命令供参考：
    ```bash
